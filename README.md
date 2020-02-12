@@ -1,15 +1,15 @@
 # Dedup
 A demo dedupllication program leveraging external merge sort for processing salable text input. This program keeps the first occurrence of duplicated lines. The lines in the output file maintain the order in the input file. 
 
-* Q: **What is the time complexity of this program?**  
-A: The overall time complexity is O(NlgN), where N is the number of lines in the input file. More specifically, let n be the number of lines in the segmented file. The in-memory sort step takes O(N/n * lgn) time. The external merge step takes O(N * lg(N/n)) = O(NlgN) time. Other steps take O(N) time. 
+* **Q**: **What is the time complexity of this program?**  
+**A**: The overall time complexity is O(NlgN), where N is the number of lines in the input file. More specifically, let n be the number of lines in the segmented file. The in-memory sort step takes O(N/n * lgn) time. The external merge step takes O(N * lg(N/n)) = O(NlgN) time. Other steps take O(N) time. 
 
-* Q: **Why not use the hasing approach?**  
-A: There are two drawbacks in the hashing approach: 1) Use line as the key is not scalable, but using the hash value of the string as key has collisions; 2) Use one centralized hash is not scalable, but distributed hash is much more compliated to implement.
+* **Q**: **Why not use the hasing approach?**  
+**A**: There are two drawbacks in the hashing approach: 1) Use line as the key is not scalable, but using the hash value of the string as key has collisions; 2) Use one centralized hash is not scalable, but distributed hash is much more compliated to implement.
 
-## Procedure
+## Algorithm
 
-The deduplication algorithm has the following steps:
+The deduplication procedure consists of the following steps ([implmentation](https://github.com/jie-mei/Dedup/blob/f7a9ed945da3fc217f1aeb0787f461e2d28c75d0/Dedup/Program.cs#L32)):
 
 1. **Encode** - Encode the input lines with the line position in the original document. This step converts the input lines to Record objects. A Record is an abstract representation of an indexed line. The data is processed in stream in order to handle scalable input files.
 2. **Segment** - Segment the indexed file into smaller segments, so that each segment can be sort in-memory.
