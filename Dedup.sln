@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.960
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dedup", "Dedup\Dedup.csproj", "{F413507F-F93B-4AA2-9E05-8D8AC93BD089}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F413507F-F93B-4AA2-9E05-8D8AC93BD089}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F413507F-F93B-4AA2-9E05-8D8AC93BD089}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F413507F-F93B-4AA2-9E05-8D8AC93BD089}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F413507F-F93B-4AA2-9E05-8D8AC93BD089}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {86C9FA3B-A743-4E1A-A3E4-13458846AF90}
+	EndGlobalSection
+EndGlobal
